@@ -1,0 +1,25 @@
+docker run postgres:13.0           # installs postgress and starts container
+docker ps                          # shows container running currently
+docker ps -a                       # shows container run  history
+docker images                      # shows the list of docker images available
+docker pull <image_name>           # only pulls the image
+docker run <image_name>            # pulls the image and starts the container
+                                   # checks if you have the image, if starts a container using the image and if not it downloads the image and starts the container as well
+docker run -d <image_name>         # starts a container in a detached mode
+docker stop <container_id>         # stops the container that is running
+docker start <container_id>        # start the container with the container_id
+
+# container troubleshoot
+docker logs <container_id>           # logs detail about a container
+docker logs <container_name>         # logs detail about a container
+
+# docker run -p6001:6379 -d --name redis-older redis:4.0  # This runs on a binded host server 6001, runs in detach mode and renames a container to redis-older instead of a random name
+
+# docker exec -it <container_id> /bin/bash    # this opens up the container terminal or shell
+# docker exec -it <container_name> /bin/bash    # this opens up the container terminal or shell
+                                              # commands in shell 
+                                              # env      # displays make-up of the container
+                                              # exit     # exits the shell
+
+
+
